@@ -25,13 +25,10 @@
       align-items: center;
     }
 
-    /* Канвас – виртуальный телефон */
+    /* Канвас растягивается на весь экран */
     #unity-canvas {
       width: 100%;
-      height: auto;
-      max-width: 720px;
-      max-height: 1280px;
-      aspect-ratio: 9 / 16;
+      height: 100%;
       background: #000;
       display: block;
     }
@@ -112,6 +109,7 @@
       }
     }
 
+    // Проверка ориентации
     function checkOrientation() {
       if (window.innerWidth > window.innerHeight) {
         rotateWarning.style.display = "flex";
@@ -134,7 +132,6 @@
       productName: "Dozvon",
       productVersion: "1.0",
       showBanner: unityShowBanner,
-      // Дефолтная синхронизация размеров канваса
       matchWebGLToCanvasSize: true
     };
 
